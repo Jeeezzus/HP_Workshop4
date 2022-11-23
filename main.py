@@ -17,7 +17,7 @@ async def list():
     return TODOLIST
 
 @app.get("/todo/{item_id}") #get specific item datas depending on the id
-async def root(item_id: int):
+async def detail(item_id: int):
      it = find_item(item_id)
      return {(str(it.id)) + "; title: " + str(it.title) + ", date: " + str(it.date) + ", state: " + str(it.state) + ", description: " + str(it.desc)}
 
